@@ -7,6 +7,7 @@ License:	GPL
 Group:		Applications/System
 Source0:	http://www.ka9q.net/code/cpuid/%{name}-%{version}.tar.gz
 URL:		http://www.ka9q.net/code/cpuid/
+ExclusiveArch:	%{ix86}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -20,7 +21,8 @@ procesora (x86).
 %setup -q
 
 %build
-%{__make}
+%{__make} \
+	CFLAGS="%{rpmcflags} -Wall"
 
 %install
 rm -rf $RPM_BUILD_ROOT
