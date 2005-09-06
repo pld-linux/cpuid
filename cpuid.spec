@@ -8,7 +8,7 @@ Group:		Applications/System
 Source0:	http://www.ka9q.net/code/cpuid/%{name}-%{version}.tar.gz
 # Source0-md5:	641af7bb12e1feb0b0d97ed68908297c
 URL:		http://www.ka9q.net/code/cpuid/
-ExclusiveArch:	%{ix86} %{x86_64}
+ExclusiveArch:	%{ix86} %{x8664}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
