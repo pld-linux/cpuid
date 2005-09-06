@@ -2,7 +2,7 @@ Summary:	x86 CPUID display program
 Summary(pl):	CPUID dla procesorów x86
 Name:		cpuid
 Version:	3.3
-Release:	2
+Release:	3
 License:	GPL
 Group:		Applications/System
 Source0:	http://www.ka9q.net/code/cpuid/%{name}-%{version}.tar.gz
