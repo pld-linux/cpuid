@@ -1,5 +1,5 @@
 Summary:	x86 CPUID display program
-Summary(pl.UTF-8):   CPUID dla procesorów x86
+Summary(pl.UTF-8):	CPUID dla procesorów x86
 Name:		cpuid
 Version:	3.3
 Release:	3
