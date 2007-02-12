@@ -1,5 +1,5 @@
 Summary:	x86 CPUID display program
-Summary(pl):	CPUID dla procesorów x86
+Summary(pl.UTF-8):   CPUID dla procesorÃ³w x86
 Name:		cpuid
 Version:	3.3
 Release:	3
@@ -15,8 +15,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Program that displays details about x86 installed processor.
 
-%description -l pl
-Program wy¶wietlaj±cy szczegó³owe informacje na temat zainstalowanego
+%description -l pl.UTF-8
+Program wyÅ›wietlajÄ…cy szczegÃ³Å‚owe informacje na temat zainstalowanego
 procesora (x86).
 
 %prep
