@@ -1,14 +1,13 @@
 Summary:	x86 CPUID display program
 Summary(pl.UTF-8):	CPUID dla procesorów x86
 Name:		cpuid
-Version:	3.3
-Release:	3
-License:	GPL
+Version:	20110305
+Release:	1
+License:	GPL v2
 Group:		Applications/System
-Source0:	http://www.ka9q.net/code/cpuid/%{name}-%{version}.tar.gz
-# Source0-md5:	641af7bb12e1feb0b0d97ed68908297c
-URL:		http://www.ka9q.net/code/cpuid/
-Patch0:		%{name}-Makefile.patch
+Source0:	http://www.etallen.com/cpuid/%{name}-%{version}.src.tar.gz
+# Source0-md5:	c13317518ce5d9ddba07eff9ead8080c
+URL:		http://www.etallen.com/cpuid.html
 ExclusiveArch:	%{ix86} %{x8664}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -21,7 +20,6 @@ procesora (x86).
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 %{__make} \
@@ -30,13 +28,16 @@ procesora (x86).
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_sbindir}
+install -d $RPM_BUILD_ROOT{%{_sbindir},%{_mandir}/man1}
 
-install cpuid $RPM_BUILD_ROOT%{_sbindir}
+install %{name} $RPM_BUILD_ROOT%{_sbindir}
+cp -a %{name}.man $RPM_BUILD_ROOT%{_mandir}/man1/%{name}.1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc ChangeLog FUTURE
 %attr(755,root,root) %{_sbindir}/*
+%{_mandir}/man1/%{name}.1*
