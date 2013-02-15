@@ -1,0 +1,110 @@
+--- cpuid-20120601/cpuid.c.formatsec	2013-02-15 17:52:31.279524266 +0100
++++ cpuid-20120601/cpuid.c	2013-02-15 17:55:58.111737095 +0100
+@@ -1760,7 +1760,7 @@ print_synth_intel(const char*          n
+                   unsigned int         val,  /* val_1_eax */
+                   const code_stash_t*  stash)
+ {
+-   printf(name);
++   fputs(name, stdout);
+    START;
+    FM  (    0, 4,  0, 0,         "Intel i80486DX-25/33");
+    FM  (    0, 4,  0, 1,         "Intel i80486DX-50");
+@@ -2263,7 +2263,7 @@ print_synth_amd(const char*          nam
+                 unsigned int         val,
+                 const code_stash_t*  stash)
+ {
+-   printf(name);
++   fputs(name, stdout);
+    START;
+    FM  (0, 4,  0, 3,         "AMD 80486DX2");
+    FM  (0, 4,  0, 7,         "AMD 80486DX2WB");
+@@ -2824,7 +2824,7 @@ static void
+ print_synth_cyrix(const char*   name,
+                   unsigned int  val)
+ {
+-   printf(name);
++   fputs(name, stdout);
+    START;
+    FM (0,4,  0,4,     "Cyrix Media GX / GXm");
+    FM (0,4,  0,9,     "Cyrix 5x86");
+@@ -2845,7 +2845,7 @@ static void
+ print_synth_via(const char*   name,
+                 unsigned int  val)
+ {
+-   printf(name);
++   fputs(name, stdout);
+    START;
+    FM (0, 5,  0, 4,     "VIA WinChip (C6)");
+    FM (0, 5,  0, 8,     "VIA WinChip 2 (C6-2)");
+@@ -2882,7 +2882,7 @@ static void
+ print_synth_umc(const char*   name,
+                 unsigned int  val)
+ {
+-   printf(name);
++   fputs(name, stdout);
+    START;
+    FM (0,4,  0,1,     "UMC U5D (486DX)");
+    FMS(0,4,  0,2,  3, "UMC U5S (486SX)");
+@@ -2895,7 +2895,7 @@ static void
+ print_synth_nexgen(const char*   name,
+                    unsigned int  val)
+ {
+-   printf(name);
++   fputs(name, stdout);
+    START;
+    FMS(0,5,  0,0,  4, "NexGen P100");
+    FMS(0,5,  0,0,  6, "NexGen P120 (E2/C0)");
+@@ -2907,7 +2907,7 @@ static void
+ print_synth_rise(const char*   name,
+                  unsigned int  val)
+ {
+-   printf(name);
++   fputs(name, stdout);
+    START;
+    FM (0,5,  0,0,     "Rise mP6 iDragon, .25u");
+    FM (0,5,  0,2,     "Rise mP6 iDragon, .18u");
+@@ -2924,7 +2924,7 @@ print_synth_transmeta(const char*
+ {
+    /* TODO: Add code-based detail for Transmeta Crusoe TM5700/TM5900 */
+    /* TODO: Add code-based detail for Transmeta Efficeon */
+-   printf(name);
++   fputs(name, stdout);
+    START;
+    FMSQ(0, 5,  0,4,  2, t2, "Transmeta Crusoe TM3200");
+    FMS (0, 5,  0,4,  2,     "Transmeta Crusoe TM3x00 (unknown model)");
+@@ -2946,7 +2946,7 @@ static void
+ print_synth_sis(const char*   name,
+                 unsigned int  val)
+ {
+-   printf(name);
++   fputs(name, stdout);
+    START;
+    FM (0,5,  0,0,     "SiS 55x");
+    DEFAULT           ("unknown");
+@@ -2957,7 +2957,7 @@ static void
+ print_synth_nsc(const char*   name,
+                 unsigned int  val)
+ {
+-   printf(name);
++   fputs(name, stdout);
+    START;
+    FM (0,5,  0,4,     "NSC Geode GX1/GXLV/GXm");
+    FM (0,5,  0,5,     "NSC Geode GX2");
+@@ -2970,7 +2970,7 @@ static void
+ print_synth_vortex(const char*   name,
+                    unsigned int  val)
+ {
+-   printf(name);
++   fputs(name, stdout);
+    START;
+    FM (0,5,  0,2,     "Vortex86DX");
+    FM (0,5,  0,8,     "Vortex86MX");
+@@ -2982,7 +2982,7 @@ static void
+ print_synth_rdc(const char*   name,
+                 unsigned int  val)
+ {
+-   printf(name);
++   fputs(name, stdout);
+    START;
+    FM (0,5,  0,8,     "RDC IAD 100");
+    DEFAULT           ("unknown");

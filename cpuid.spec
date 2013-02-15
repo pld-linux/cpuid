@@ -7,6 +7,7 @@ License:	GPL v2+
 Group:		Applications/System
 Source0:	http://www.etallen.com/cpuid/%{name}-%{version}.src.tar.gz
 # Source0-md5:	4012dd0dba5e214b59de54db22e5e79b
+Patch0:		%{name}-format-security.patch
 URL:		http://www.etallen.com/cpuid.html
 ExclusiveArch:	%{ix86} %{x8664}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -21,6 +22,7 @@ procesora (lub procesorów) x86 zebrane przy użyciu instrukcji CPUID.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__make} \
