@@ -5,9 +5,9 @@ Version:	20221003
 Release:	1
 License:	GPL v2+
 Group:		Applications/System
-Source0:	http://www.etallen.com/cpuid/%{name}-%{version}.src.tar.gz
+Source0:	https://www.etallen.com/cpuid/%{name}-%{version}.src.tar.gz
 # Source0-md5:	ba4812eb28a3b6a288f8b28e32f55bf0
-URL:		http://www.etallen.com/cpuid.html
+URL:		https://www.etallen.com/cpuid.html
 ExclusiveArch:	%{ix86} %{x8664} x32
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
