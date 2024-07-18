@@ -1,12 +1,12 @@
 Summary:	x86 CPUID information display program
 Summary(pl.UTF-8):	Program wyświetlający informacje CPUID dla procesorów x86
 Name:		cpuid
-Version:	20240409
+Version:	20240716
 Release:	1
 License:	GPL v2+
 Group:		Applications/System
 Source0:	https://www.etallen.com/cpuid/%{name}-%{version}.src.tar.gz
-# Source0-md5:	6fe411da2c342eeca6a6ac996cb7054d
+# Source0-md5:	36f9e43e3273f32444f3d7c080efa10a
 URL:		https://www.etallen.com/cpuid.html
 ExclusiveArch:	%{ix86} %{x8664} x32
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
